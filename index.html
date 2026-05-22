@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generatore Mesh 3D - Inferenza Tripo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui-panel">
+        <h2>Generatore 3D (Tripo)</h2>
+        <div class="input-group">
+            <label for="imageInput">Seleziona un'immagine:</label>
+            <input type="file" id="imageInput" accept="image/png, image/jpeg">
+        </div>
+        <button id="generateBtn">Genera Mesh 3D</button>
+        <div id="status">In attesa di input...</div>
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Contenitore per il canvas 3D -->
+    <div id="canvas-container"></div>
+
+    <!-- Import Map per Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    
+    <!-- Script principale -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
